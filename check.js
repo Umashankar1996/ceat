@@ -1,0 +1,1 @@
+import { getPool } from './server/config/db.js'; getPool().then(p => p.request().query("SELECT * FROM APP_SETTINGS WHERE SETTING_KEY = 'APP_LOGO_PATH'")).then(r => console.log(r.recordset)).catch(console.error).finally(() => process.exit());
